@@ -39,8 +39,12 @@ Constraints:
 0 <= value <= 105
 At most 2 * 105 calls will be made to get and put.
 """
+"""
+Time Complexity: O(1)
+Space Complexity: O(n) 
+"""
 
-class LRUCache:
+class LRUCache1:
 
     def __init__(self, capacity: int):
         self.capacity = capacity
@@ -66,6 +70,38 @@ class LRUCache:
                 del self.cache[self.lru.pop(0)]
         self.cache[key] = value
         self.lru.append(key)
+
+
+"""
+Time Complexity: O(1)
+Space Complexity: O(1) 
+"""
+class LRUCache:
+
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = {}
+        
+
+    def get(self, key: int) -> int:
+        # print(self.cache, self.lru)
+        if key in self.cache:
+            value = self.cache[key]
+            del self.cache[key]
+            self.cache[key] = value
+            return value
+        return -1
+        
+
+    def put(self, key: int, value: int) -> None:
+        # print(self.cache, self.lru)
+        if key in self.cache:
+            del self.cache[key]
+            self.cache[key] = value
+        else:
+            if len(self.cache) == self.capacity :
+                del self.cache[next(iter(self.cache))]
+            self.cache[key] = value
             
         
 if __name__ == "__main__":
