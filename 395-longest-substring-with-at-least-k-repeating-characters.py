@@ -24,7 +24,7 @@ s consists of only lowercase English letters.
 """
 
 """
-Time Complexity: O(2n) = O(n)
+Time Complexity: 
 Space Complexity: O(n) 
 """
 
