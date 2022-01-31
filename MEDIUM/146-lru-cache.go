@@ -44,7 +44,8 @@ Time Complexity: O(1)
 Space Complexity: O(n)
 """
 */
-package main
+
+/*package main
 
 import "fmt"
 
@@ -109,6 +110,52 @@ func (this *LRUCache) Put(key int, value int) {
 	}
 	this.cache[key] = value
 	this.lru = append(this.lru, lruList{key: key})
+	// fmt.Println("after", key, value, this.cache, this.lru)
+}*/
+package main
+
+import (
+	"container/list"
+	"fmt"
+)
+
+type LRUCache struct {
+	capacity   int
+	cache      map[int]*list.Element
+	linkedList *list.List
+}
+
+func Constructor(capacity int) LRUCache {
+	return LRUCache{
+		capacity:   capacity,
+		cache:      make(map[int]*list.Element, capacity),
+		linkedList: list.New(),
+	}
+}
+
+func (this *LRUCache) Get(key int) int {
+	// fmt.Println("before get", key, this.cache, this.lru)
+	if element, found := this.cache[key]; found {
+		this.linkedList.MoveToFront(element)
+		// fmt.Println("after get", key, this.cache, this.lru)
+		return element.Value.([]int)[1]
+	}
+	return -1
+}
+
+func (this *LRUCache) Put(key int, value int) {
+	// fmt.Println("before", key, value, this.cache, this.lru)
+	if element, found := this.cache[key]; found {
+		this.linkedList.Remove(element)
+	} else {
+		if len(this.cache) == this.capacity {
+			lastElement := this.linkedList.Back()
+			v := this.linkedList.Remove(lastElement)
+			delete(this.cache, v.([]int)[0])
+		}
+	}
+	newElement := this.linkedList.PushFront([]int{key, value})
+	this.cache[key] = newElement
 	// fmt.Println("after", key, value, this.cache, this.lru)
 }
 
