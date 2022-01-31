@@ -1,7 +1,7 @@
 # leetcode
 all leetcode solution
 
-# Leetcode-Golang
+# Leetcode-Python-Golang
 Leetcode Solutions in Go
 
 Please give this repo a ⭐ if it inspires by me to solve problems in Leetcode.
