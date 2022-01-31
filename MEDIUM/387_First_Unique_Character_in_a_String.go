@@ -1,27 +1,26 @@
-/* https://leetcode.com/problems/first-missing-positive/
-Given an unsorted integer array nums, return the smallest missing positive integer.
+/* https://leetcode.com/problems/first-unique-character-in-a-string/
+Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
 
-You must implement an algorithm that runs in O(n) time and uses constant extra space.
-
-
+ 
 
 Example 1:
 
-Input: nums = [1,2,0]
-Output: 3
+Input: s = "leetcode"
+Output: 0
 Example 2:
 
-Input: nums = [3,4,-1,1]
+Input: s = "loveleetcode"
 Output: 2
 Example 3:
 
-Input: nums = [7,8,9,11,12]
-Output: 1
-
+Input: s = "aabb"
+Output: -1
+ 
 
 Constraints:
 
-1 <= nums.length <= 5 * 105
+1 <= s.length <= 105
+s consists of only lowercase English letters.
 -231 <= nums[i] <= 231 - 1*/
 
 package main
