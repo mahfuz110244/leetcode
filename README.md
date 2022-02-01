@@ -10,6 +10,7 @@ Please give this repo a ⭐ if it inspires by me to solve problems in Leetcode.
 |LC #|Description|
 |:-:|:-|
 |[1](https://leetcode.com/problems/two-sum/)| Two Sum|
+|[9](https://leetcode.com/problems/palindrome-number/)| Palindrome Number|
 |[387](https://leetcode.com/problems/first-unique-character-in-a-string/)| First Unique Character in a String|
 
 
