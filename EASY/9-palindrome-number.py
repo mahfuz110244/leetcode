@@ -1,4 +1,5 @@
 """
+https://leetcode.com/problems/palindrome-number/
 Given an integer x, return true if x is palindrome integer.
 
 An integer is a palindrome when it reads the same backward as forward.
@@ -31,20 +32,23 @@ Constraints:
 Follow up: Could you solve it without converting the integer to a string?
 """
 
-# def isPalindrome( x: int) -> bool:
-#     if x < 0: 
-#         return False
-#     if len(str(x))==1:
-#         return True
-#     palindromStr = ""
-#     n = x
-#     while n!=0:
-#         palindromStr +=str(n % 10)
-#         # print(palindromStr)
-#         n = n // 10
-#     if str(x) == palindromStr:
-#         return True
-#     return False
+def isPalindrome1( x: int) -> bool:
+    if x < 0: 
+        return False
+    if len(str(x))==1:
+        return True
+    palindromStr = ""
+    n = x
+    while n!=0:
+        palindromStr +=str(n % 10)
+        # print(palindromStr)
+        n = n // 10
+    if str(x) == palindromStr:
+        return True
+    return False
+
+def isPalindrome2( x: int) -> bool:
+    return str(x) == str(x)[::-1]
 
 """
 Complexity Analysis
@@ -81,3 +85,4 @@ if __name__ == "__main__":
     print(isPalindrome(-121))
     print(isPalindrome(10))
     print(isPalindrome(0))
+    print(isPalindrome(111))

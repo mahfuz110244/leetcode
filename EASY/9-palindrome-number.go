@@ -1,4 +1,5 @@
 /*
+https://leetcode.com/problems/palindrome-number/
 Given an integer x, return true if x is palindrome integer.
 
 An integer is a palindrome when it reads the same backward as forward.
@@ -46,14 +47,13 @@ package main
 import "fmt"
 
 func isPalindrome(x int) bool {
-	var reversedNum int
-
 	// If x is a negative number it is not a palindrome
 	// If x % 10 = 0, in order for it to be a palindrome the first digit should also be 0
 	if x < 0 || (x%10 == 0 && x != 0) {
 		return false
 	}
 
+	reversedNum := 0
 	for x > reversedNum {
 		reversedNum = reversedNum*10 + x%10
 		x = x / 10
@@ -71,4 +71,5 @@ func main() {
 	fmt.Println(isPalindrome(-121))
 	fmt.Println(isPalindrome(0))
 	fmt.Println(isPalindrome(23132))
+	fmt.Println(isPalindrome(11111))
 }
