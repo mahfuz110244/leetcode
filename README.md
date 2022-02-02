@@ -11,6 +11,8 @@ Please give this repo a ⭐ if it inspires by me to solve problems in Leetcode.
 |:-:|:-|
 |[1](https://leetcode.com/problems/two-sum/)| Two Sum|
 |[9](https://leetcode.com/problems/palindrome-number/)| Palindrome Number|
+|[13](https://leetcode.com/problems/roman-to-integer/)| Roman to Integer|
+|[206](https://leetcode.com/problems/reverse-linked-list/)| Reverse Linked List|
 |[387](https://leetcode.com/problems/first-unique-character-in-a-string/)| First Unique Character in a String|
 
 
