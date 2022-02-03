@@ -26,6 +26,8 @@ Please give this repo a ⭐ if it inspires by me to solve problems in Leetcode.
 |[146](https://leetcode.com/problems/lru-cache/)| LRU Cache|
 |[215](https://leetcode.com/problems/kth-largest-element-in-an-array/)|Kth Largest Element in an Array|
 |[7](https://leetcode.com/problems/reverse-integer/)|Reverse Integer|
+|[1029](https://leetcode.com/problems/two-city-scheduling/)|Two City Scheduling|
+|[1169](https://leetcode.com/problems/invalid-transactions)|Invalid Transactions|
 
 ## Hard
 |LC #|Description|
