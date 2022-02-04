@@ -33,6 +33,11 @@ Constraints:
 1 <= n <= 104
 """
 
+
+"""
+Time Complexity: O(n)
+Space Complexity: O(1) 
+"""
 def rotatedDigits(n: int) -> int:
     count = 0
     for d in range(1, n+1):
