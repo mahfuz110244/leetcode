@@ -98,6 +98,10 @@ func main() {
 		Val:  1,
 		Next: &node2,
 	}
+	for node1.Next != nil {
+		fmt.Println(node1.Val)
+		node1 = *node1.Next
+	}
 
 	fmt.Println(reverseList(&node1))
 	// fmt.Println(reverseList1(&node1))
