@@ -32,10 +32,129 @@ Both list1 and list2 are sorted in non-decreasing order.
 
 package main
 
+import "fmt"
+
 // Definition for singly-linked list.
 type ListNode struct {
 	Val  int
 	Next *ListNode
+}
+
+func mergeTwoLists2(list1 *ListNode, list2 *ListNode) *ListNode {
+    if list1 == nil {
+        return list2
+    }
+    if list2 == nil {
+        return list1
+    }
+    var prev *ListNode
+    var res *ListNode
+    for list1 != nil && list2 !=nil {
+        if list1.Val <= list2.Val {
+            if prev != nil {
+                prev.Next = list1
+                prev = prev.Next
+                
+            } else {
+                prev = list1
+                res = prev
+            }
+            list1 = list1.Next    
+        } else {
+            if prev != nil {
+                prev.Next = list2
+                prev = prev.Next
+            } else {
+                prev = list2
+                res = prev
+            }
+            list2 = list2.Next    
+        }
+    }
+    for list1 != nil {
+        prev.Next = list1
+        prev = prev.Next
+        list1 = list1.Next    
+    }
+    for list2 != nil {
+        prev.Next = list2
+        prev = prev.Next
+        list2 = list2.Next    
+    }
+   return res
+}
+
+func mergeTwoLists1(list1 *ListNode, list2 *ListNode) *ListNode {
+	if list1 == nil {
+		return list2
+	}
+	if list2 == nil {
+		return list1
+	}
+	var prev *ListNode
+	var res *ListNode
+	fmt.Println(prev, res)
+	// temp1 := list1
+	// for temp1 != nil {
+	//     fmt.Println(temp1, temp1.Val, temp1.Next)
+	//     if prev == nil {
+	//         prev = temp1
+	//         res = prev
+	//     } else {
+	//         prev.Next = temp1
+	//         prev = prev.Next
+	//     }
+	//     fmt.Println(prev, res)
+	//     temp1 = temp1.Next
+	//     fmt.Println()
+	// }
+	// fmt.Println(prev, res)
+	// result := prev
+	// fmt.Println(list1)
+	temp1 := list1
+	temp2 := list2
+	for temp1 != nil && temp2 != nil {
+		if temp1.Val <= temp2.Val {
+			fmt.Println(temp1.Val)
+			if prev == nil {
+				prev = temp1
+				res = prev
+			} else {
+				prev.Next = temp1
+				prev = prev.Next
+				fmt.Println(prev, prev.Next)
+			}
+			temp1 = temp1.Next
+		} else {
+			fmt.Println(temp2.Val)
+			if prev == nil {
+				prev = temp2
+				res = prev
+			} else {
+				prev.Next = temp2
+				prev = prev.Next
+				fmt.Println(prev, prev.Next)
+			}
+			temp2 = temp2.Next
+		}
+		// prev = prev.Next
+		// fmt.Println(prev)
+	}
+	for temp1 != nil {
+		fmt.Println(temp1.Val)
+		prev.Next = temp1
+		prev = prev.Next
+		fmt.Println(prev, prev.Next)
+		temp1 = temp1.Next
+	}
+	for temp2 != nil {
+		fmt.Println(temp2.Val)
+		prev.Next = temp2
+		prev = prev.Next
+		fmt.Println(prev, prev.Next)
+		temp2 = temp2.Next
+	}
+	return res
 }
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
