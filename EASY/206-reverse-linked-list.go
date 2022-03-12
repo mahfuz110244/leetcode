@@ -60,7 +60,11 @@ func reverseList1(head *ListNode) *ListNode {
 }
 
 func reverseList(head *ListNode) *ListNode {
-	var reverseNode *ListNode = nil
+	/*
+		Runtime: 0 ms, faster than 100.00% of Go online submissions for Reverse Linked List.
+		Memory Usage: 2.6 MB, less than 91.09% of Go online submissions for Reverse Linked List.
+	*/
+	var reverseNode *ListNode
 	// var cur *ListNode = head
 	for head != nil {
 		// var currentNode *ListNode = nil
@@ -97,6 +101,10 @@ func main() {
 	node1 := ListNode{
 		Val:  1,
 		Next: &node2,
+	}
+	for node1.Next != nil {
+		fmt.Println(node1.Val)
+		node1 = *node1.Next
 	}
 
 	fmt.Println(reverseList(&node1))
