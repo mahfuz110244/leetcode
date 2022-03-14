@@ -25,8 +25,9 @@ Please give this repo a ⭐ if it inspires by me to solve problems in Leetcode.
 |[5](https://leetcode.com/problems/longest-palindromic-substring/)|Longest Substring Without Repeating Characters|
 |[7](https://leetcode.com/problems/reverse-integer/)|Reverse Integer|
 |[395](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)|Longest Substring with At Least K Repeating Characters|
-|[146](https://leetcode.com/problems/lru-cache/)| LRU Cache|
+|[146](https://leetcode.com/problems/lru-cache/)|LRU Cache|
 |[215](https://leetcode.com/problems/kth-largest-element-in-an-array/)|Kth Largest Element in an Array|
+|[442](https://leetcode.com/problems/find-all-duplicates-in-an-array)|Find All Duplicates in an Array|
 |[788](https://leetcode.com/problems/rotated-digits/)|Rotated Digits|
 |[849](https://leetcode.com/problems/maximize-distance-to-closest-person/)|Maximize Distance to Closest Person|
 |[901](https://leetcode.com/problems/online-stock-span/)|Online Stock Span|
