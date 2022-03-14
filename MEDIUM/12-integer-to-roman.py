@@ -59,7 +59,7 @@ def intToRoman(num: int) -> str:
     res=''
     
     for i,val in enumerate(vals): 
-        res += (num//val) * romans[i];
+        res += (num//val) * romans[i]
         num %= val
         
     return res
